@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>立体几何搜索</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dark-mode.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
+    <div class="flex flex-col items-center justify-center min-h-screen p-4">
+        <div class="absolute top-4 right-4">
+            <button
+                id="darkModeToggle"
+                class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                aria-label="切换深色模式"
+            >
+                <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+        <h1 id="currentTime" class="text-4xl font-bold mb-8 text-gray-800 dark:text-gray-200"></h1>
+        <form id="searchForm" class="w-full max-w-2xl" aria-label="搜索表单">
+            <div class="flex space-x-2">
+                <select id="searchEngine" tabindex="0" class="w-28 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200">
+                    <option value="https://www.bing.com/search?q=">Bing</option>
+                    <option value="https://www.google.com/search?q=">Google</option>
+                    <option value="https://www.sogou.com/web?query=">Sogou</option>
+                    <option value="https://www.baidu.com/s?wd=">Baidu</option>
+                    <option value="https://search.bilibili.com/all?keyword=">bilibili</option>
+                    <option value="https://www.alipansou.com/search?k=">猫狸盘搜</option>
+                </select>
+                <input 
+                    type="text" 
+                    id="searchQuery" 
+                    placeholder="输入你的搜索查询" 
+                    class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:placeholder-gray-400"
+                    required
+                    aria-label="搜索查询输入框"
+                >
+                <button 
+                    type="submit" 
+                    class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-600 dark:hover:bg-blue-700"
+                    aria-label="执行搜索"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                    </svg>
+                    搜索
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="js/tailwind.config.js"></script>
+    <script src="js/darkMode.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/time.js"></script>
+</body>
+</html>
