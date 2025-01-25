@@ -38,8 +38,6 @@ Get-Search/
 ├── index.html                   # 主页文件
 └── README.md                    # 项目说明文档
 
-深色版本
-
 ## 版权与许可信息
 Get-Search 是一个开源项目，遵循 GNU General Public License v3 (GPLv3) 许可证。
 
