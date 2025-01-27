@@ -14,7 +14,7 @@ Get-Search 是一个简洁的起始页项目，旨在为用户提供一个干净
 ### 获取代码
 你可以通过以下方式获取 Get-Search 的代码：
 - **克隆仓库**
-git clone https://github.com/tiyao114/Get-Search.git
+`git clone https://github.com/tiyao114/Get-Search.git`
 
 - **下载 ZIP 文件**：点击绿色的 "Code" 按钮，然后选择 "Download ZIP"
 
