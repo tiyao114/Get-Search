@@ -28,16 +28,6 @@ Get-Search 是一个简洁的起始页项目，旨在为用户提供一个干净
  - 输入关键词到页面顶部的搜索栏中。
  - 默认情况下使用 Bing 进行搜索，但你可以通过下拉菜单选择其他搜索引擎（如 Google、Baidu 等）。
 
-## 代码目录结构
-Get-Search/
-├── js/
-│   ├── darkMode.js              # 暗黑模式
-│   ├── search.js                # 搜索功能+快捷键
-│   ├── tailwind.config.js       # 美化
-│   ├── time.js                  # 时间组件
-├── index.html                   # 主页文件
-└── README.md                    # 项目说明文档
-
 ## 版权与许可信息
 Get-Search 是一个开源项目，遵循 GNU General Public License v3 (GPLv3) 许可证。
 
